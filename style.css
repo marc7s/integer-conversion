@@ -32,5 +32,7 @@ h1, h2, h3{
     width: 80%;
     margin: auto;
     text-align: center;
-    color: white;
+    color: red;
+    opacity: 0;
+    font-size: 22px;
 }

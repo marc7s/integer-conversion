@@ -1,0 +1,6 @@
+body.light{
+    background-color: white;
+}
+body.light h1, body.light h2{
+    color: black;
+}

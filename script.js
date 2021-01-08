@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }, false);
 
-
 function handleInput(el){
     if(el.value != ''){
         document.getElementById('num_hex').value = document.getElementById('num_hex').value.toUpperCase();
@@ -31,9 +30,9 @@ function handleInput(el){
                 if(id != el.id)
                     document.getElementById(id).value = '';
             });
-            document.getElementById('bitError').style.color = 'red';
+            document.getElementById('bitError').style.opacity = 1;
         }else{
-            document.getElementById('bitError').style.color = 'white';
+            document.getElementById('bitError').style.opacity = 0;
     
             document.getElementById('num_hex').value = val.toString(16).toUpperCase();
     
@@ -67,9 +66,9 @@ function convertFromBin2k(val){
 }
 function updateValues(){
     if(isBitError(val, bits)){
-        document.getElementById('bitError').style.color = 'red';
+        document.getElementById('bitError').style.opacity = '1';
     }else{
-        document.getElementById('bitError').style.color = 'white';
+        document.getElementById('bitError').style.opacity = '0';
         handleInput(document.getElementById('num_dec'));
     }
 }
@@ -80,4 +79,10 @@ function padBin(val){
 }
 function isBitError(val, bits){
     return val >= Math.pow(2, bits) || val <= -Math.pow(2, bits);
+}
+function toggleDarkMode(el){
+    if(el.checked)
+        document.getElementsByTagName("body")[0].className = 'dark';
+    else
+        document.getElementsByTagName("body")[0].className = 'light';
 }

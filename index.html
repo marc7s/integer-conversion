@@ -3,16 +3,23 @@
         <title>Integer conversion</title>
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="toggle.css">
+        <link rel="stylesheet" href="darkmode.css">
+        <link rel="stylesheet" href="lightmode.css">
     </head>
-    <body>
+    <body class="dark">
         <h1 class="pageTitle">Integer conversion</h1>
+        <label class="switch">
+            <input type="checkbox" onchange="toggleDarkMode(this)" checked>
+            <span class="slider"></span>
+        </label>
         <div class="inputWrapper bitInput">
             <h2>Bits</h2>
             <input type="number" step=1 value=4 id="bits" oninput="updateValues()">
         </div>
         
         <div class="bitError" id="bitError">
-            <h2>Error: Too few bits to represent number</h2>
+            <h3>Error: Too few bits to represent number</h3>
         </div>
         
         <div class="inputContainer">

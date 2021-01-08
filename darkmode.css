@@ -1,0 +1,6 @@
+body.dark{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+body.dark h1, body.dark h2{
+    color: white;
+}
