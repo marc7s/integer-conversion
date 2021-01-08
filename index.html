@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Integer conversion</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="pageTitle">Integer conversion</h1>
+        <div class="inputWrapper bitInput">
+            <h2>Bits</h2>
+            <input type="number" step=1 value=4 id="bits" oninput="updateValues()">
+        </div>
+        
+        <div class="bitError" id="bitError">
+            <h2>Error: Too few bits to represent number</h2>
+        </div>
+        
+        <div class="inputContainer">
+            <div class="inputWrapper">
+                <h2>Dec</h2>
+                <input type="number" step=1 id="num_dec" oninput="handleInput(this)">
+            </div>
+            
+            <div class="inputWrapper">
+                <h2>Hex</h2>
+                <input type="text" id="num_hex" oninput="handleInput(this)">
+            </div>
+
+            <div class="inputWrapper">
+                <h2>Bin</h2>
+                <input type="text" id="num_bin" oninput="handleInput(this)">
+            </div>
+
+            <div class="inputWrapper">
+                <h2>Bin 2k</h2>
+                <input type="text" id="num_bin2k" oninput="handleInput(this)">
+            </div>
+        </div>
+
+    </body>
+</html>
