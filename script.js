@@ -42,7 +42,10 @@ function handleInput(el){
             }
             else{
                 document.getElementById('num_bin').value = padBin(val.toString(2));
-                document.getElementById('num_bin2k').value = padBin(val.toString(2));
+                if(val < Math.pow(2, bits - 1))
+                    document.getElementById('num_bin2k').value = padBin(val.toString(2));
+                else
+                    document.getElementById('num_bin2k').value = 'NaN';
             }
         }
     }else{
